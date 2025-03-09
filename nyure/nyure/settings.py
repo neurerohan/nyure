@@ -152,10 +152,7 @@ MIDDLEWARE = [
 ]
 
 # Configure CORS settings
-CORS_ALLOW_ALL_ORIGINS = False
-CORS_ALLOWED_ORIGINS = [
-    'https://kalimatirate.nyure.com.np' ]
- # For development; restrict this in production
+CORS_ALLOW_ALL_ORIGINS = True 
 
 # REST Framework settings
 REST_FRAMEWORK = {
