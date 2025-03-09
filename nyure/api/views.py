@@ -9,9 +9,6 @@ from .scraper import scrape_kalimati_market
 from django.utils import timezone
 from django.db import IntegrityError
 import logging
-from django.http import JsonResponse
-from django.core.management import call_command
-from rest_framework.decorators import api_view, permission_classes
 
 logger = logging.getLogger(__name__)
 
@@ -43,20 +40,6 @@ class VegetableViewSet(viewsets.ReadOnlyModelViewSet):
                 queryset = queryset.filter(scrape_date=latest_date.scrape_date)
         
         return queryset
-
- """
-    Triggers the scraping management command via a GET request.
-    """
-@api_view(['GET'])
-@permission_classes([IsAdminUser])  # You can adjust permission if needed
-def trigger_scraping(request):
-
-    try:
-        call_command('scrape_kalimati')
-        return JsonResponse({"message": "Scraping triggered successfully!"}, status=200)
-    except Exception as e:
-        return JsonResponse({"error": str(e)}, status=500)
-
 
 
 @api_view(['POST'])
