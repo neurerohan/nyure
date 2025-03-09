@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-#*1iz$2v@)&1p!ya(=crzm37cnm9nu(@0t^g9vnuw%=5injw*o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['nyure.onrender.com',
+                'api.kalimatirate.nyure.com.np']
 
 
 # Application definition
@@ -152,12 +153,16 @@ MIDDLEWARE = [
 ]
 
 # Configure CORS settings
-CORS_ALLOW_ALL_ORIGINS = True 
+CORS_ALLOW_ALL_ORIGINS = False
+ CORS_ALLOWED_ORIGINS = [
+     'https://kalimatirate.nyure.com.np',
+     'https://api.kalimatirate.nyure.com.np',
+     'https://nyure.onrender.com']
 
 # REST Framework settings
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 120,
+    'PAGE_SIZE': 20,
 }
 
 # Configure logging (add this at the end of your settings.py)
