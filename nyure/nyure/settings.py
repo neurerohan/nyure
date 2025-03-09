@@ -152,13 +152,12 @@ MIDDLEWARE = [
 ]
 
 # Configure CORS settings
-CORS_ALLOW_ALL_ORIGINS = False
- CORS_ALLOWED_ORIGINS = ['https://kalimatirate.nyure.com.np']
+CORS_ALLOW_ALL_ORIGINS = True
 
 # REST Framework settings
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 20,
+    'PAGE_SIZE': 120,
 }
 
 # Configure logging (add this at the end of your settings.py)
