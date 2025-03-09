@@ -155,9 +155,7 @@ MIDDLEWARE = [
 # Configure CORS settings
 CORS_ALLOW_ALL_ORIGINS = False
  CORS_ALLOWED_ORIGINS = [
-     'https://kalimatirate.nyure.com.np',
-     'https://api.kalimatirate.nyure.com.np',
-     'https://nyure.onrender.com']
+     'https://kalimatirate.nyure.com.np']
 
 # REST Framework settings
 REST_FRAMEWORK = {
