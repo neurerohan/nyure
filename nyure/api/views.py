@@ -44,6 +44,21 @@ class VegetableViewSet(viewsets.ReadOnlyModelViewSet):
         
         return queryset
 
+ """
+    Triggers the scraping management command via a GET request.
+    """
+@api_view(['GET'])
+@permission_classes([IsAdminUser])  # You can adjust permission if needed
+def trigger_scraping(request):
+
+    try:
+        call_command('scrape_kalimati')
+        return JsonResponse({"message": "Scraping triggered successfully!"}, status=200)
+    except Exception as e:
+        return JsonResponse({"error": str(e)}, status=500)
+
+
+
 @api_view(['POST'])
 @permission_classes([IsAdminUser])
 def trigger_scrape(request):
