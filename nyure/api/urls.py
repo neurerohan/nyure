@@ -6,6 +6,7 @@ router = DefaultRouter()
 router.register(r'vegetables', views.VegetableViewSet)
 
 urlpatterns = [
+    path('trigger-scrape/', views.trigger_scraping, name='trigger_scraping'),
     path('', include(router.urls)),
     path('scrape/', views.trigger_scrape, name='trigger-scrape'),
 ]
