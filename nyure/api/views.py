@@ -9,6 +9,9 @@ from .scraper import scrape_kalimati_market
 from django.utils import timezone
 from django.db import IntegrityError
 import logging
+from django.http import JsonResponse
+from django.core.management import call_command
+from rest_framework.decorators import api_view, permission_classes
 
 logger = logging.getLogger(__name__)
 
