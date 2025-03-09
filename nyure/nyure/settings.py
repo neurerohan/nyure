@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-#*1iz$2v@)&1p!ya(=crzm37cnm9nu(@0t^g9vnuw%=5injw*o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["nyure.onrender.com", "api.kalimatirate.nyure.com.np"]
+ALLOWED_HOSTS = ['nyure.onrender.com', 'api.kalimatirate.nyure.com.np']
 
 
 # Application definition
@@ -154,7 +154,7 @@ MIDDLEWARE = [
 # Configure CORS settings
 CORS_ALLOW_ALL_ORIGINS = False
 CORS_ALLOWED_ORIGINS = [
-    "https://kalimatirate.nyure.com.np" ]
+    'https://kalimatirate.nyure.com.np' ]
  # For development; restrict this in production
 
 # REST Framework settings
